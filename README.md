@@ -43,6 +43,15 @@ docker compose up -d
 #### DynamoDB Adminアクセス
 - URL: http://localhost:8001
 
+### ステートバックエンド用のリソース初期化
+MinIOのS3バケットと、Terraformのロック用DynamoDBテーブルを作成します。
+.env.dev の変数に基づいてリソースが自動作成されます。
+以下のスクリプトを実行する前に、上記の MinIO / DynamoDB Local が正常に起動していることを確認してください。
+```bash
+./init_local_tfstate_resources.sh
+```
+バケットやテーブルがすでに存在する場合はスキップされます。
+
 
 ## Terraform導入ガイド（初めてTerraformを使う方へ）
 ※既にTerraformがインストールされている場合、このセクションは読み飛ばしてください
