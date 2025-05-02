@@ -1,2 +1,3 @@
 bucket_error.log
 table_error.log
+.terraform/
